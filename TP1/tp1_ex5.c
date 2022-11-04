@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include "tp1_ex5.h"
 
@@ -28,7 +27,7 @@ int read_number(int min, int max) {
     int i;
     printf("Enter a number between %d and %d: ", min, max);
     if (scanf("%d", &i) != 1) {
-        while ((i = getchar()) != '\n' && i != EOF) { }
+        while ((i = getchar()) != '\n' && i != EOF) {}
         printf("Invalid input dude, be careful!\n");
         return -1;
     }
@@ -50,7 +49,7 @@ static void question2(void) {
     int sum, i, n;
     sum = 0;
     i = read_number(MIN, MAX);
-    n=0;
+    n = 0;
     while (i != -1) {
         i = read_number(MIN, MAX);
         if (i != -1) {
@@ -59,10 +58,11 @@ static void question2(void) {
         }
     }
 
-    printf("The average is %d\n", sum/n);
+    printf("The average is %d\n", sum / n);
 }
 
 static void question3(void);
+
 int f(void);
 
 static void question3(void) {
@@ -71,13 +71,12 @@ static void question3(void) {
     printf("nb = %d\n", nb);
 }
 
-int f (void) {
+int f(void) {
     int i;
     printf("Nombre stp");
     scanf("%d", &i);
     return i;
 }
-
 
 
 void ex5(void) {

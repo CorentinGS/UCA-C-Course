@@ -6,11 +6,12 @@
 #include "tp1_ex1.h"
 
 
-int c=3;
+int c = 3;
+
 void ex1() {
-    int u,d,n;
+    int u, d, n;
     u = 1;
     d = 2;
-    n = 100*c + 10*d + u ;
+    n = 100 * c + 10 * d + u;
     printf("321 = %i\n", n);
 }

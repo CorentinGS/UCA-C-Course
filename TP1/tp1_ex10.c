@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include "tp1_ex10.h"
 
@@ -6,10 +5,15 @@
 #define FALSE 0
 
 int is_prime(int n);
+
 int is_perfect(int n);
+
 void find_k_first_prime(int k);
+
 void find_k_first_perfect(int min, int max);
+
 int is_doublon(int k);
+
 void find_k_first_doublon(int min, int max);
 
 int is_prime(int n) {
@@ -26,7 +30,7 @@ int is_prime(int n) {
 }
 
 void find_k_first_prime(int k) {
-int i, n;
+    int i, n;
     n = 0;
     i = 0;
     while (n < k) {
@@ -88,11 +92,11 @@ void find_k_first_doublon(int min, int max) {
 void ex10(void) {
     int choice;
     choice = 10;
-    while(choice != 0) {
-    printf("1. Premier nombre premier\n");
-    printf("2. Premier nombre parfait\n");
-    printf("3. Premier nombre doublon\n");
-    printf("0. Quitter\n");
+    while (choice != 0) {
+        printf("1. Premier nombre premier\n");
+        printf("2. Premier nombre parfait\n");
+        printf("3. Premier nombre doublon\n");
+        printf("0. Quitter\n");
         scanf("%d", &choice);
         switch (choice) {
             case 1:

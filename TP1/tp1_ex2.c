@@ -2,8 +2,11 @@
 #include "tp1_ex2.h"
 
 static void question1(void);
+
 static void question2(void);
+
 static void question3(void);
+
 static void question4(void);
 
 static void question1(void) {

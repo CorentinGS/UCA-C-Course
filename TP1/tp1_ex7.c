@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include "tp1_ex7.h"
 
