@@ -9,7 +9,8 @@ static void question3(void);
 
 static void question4(void);
 
-static void question1(void) {
+static void
+question1(void) {
     /* Display number from 65 to 90 */
     int i;
     for (i = 65; i <= 90; i++) {
@@ -19,7 +20,8 @@ static void question1(void) {
     printf("\n");
 }
 
-static void question2(void) {
+static void
+question2(void) {
     /* Display ASCII char from 65 to 90 */
     int i;
     for (i = 65; i <= 90; i++) {
@@ -29,16 +31,18 @@ static void question2(void) {
     printf("\n");
 }
 
-static void question3(void) {
+static void
+question3(void) {
     /* string with "Pi vaut" */
-    char *s = "Pi vaut";
+    char* s = "Pi vaut";
     /* Float pi */
     double pi = 3.14159265358979323846;
     /* Display string and float */
     printf("%s %.8f\n", s, pi);
 }
 
-static void question4(void) {
+static void
+question4(void) {
     char c = 'a';
     int i, j;
     i = 65;
@@ -51,7 +55,8 @@ static void question4(void) {
     }
 }
 
-void ex2(void) {
+void
+ex2(void) {
     question1();
     question2();
     question3();

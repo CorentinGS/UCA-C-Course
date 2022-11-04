@@ -16,7 +16,8 @@ int is_doublon(int k);
 
 void find_k_first_doublon(int min, int max);
 
-int is_prime(int n) {
+int
+is_prime(int n) {
     int i;
     if (n < 2) {
         return FALSE;
@@ -29,7 +30,8 @@ int is_prime(int n) {
     return TRUE;
 }
 
-void find_k_first_prime(int k) {
+void
+find_k_first_prime(int k) {
     int i, n;
     n = 0;
     i = 0;
@@ -42,7 +44,8 @@ void find_k_first_prime(int k) {
     }
 }
 
-int is_perfect(int n) {
+int
+is_perfect(int n) {
     int i, sum;
     sum = 0;
     for (i = 1; i < n; ++i) {
@@ -53,7 +56,8 @@ int is_perfect(int n) {
     return sum == n;
 }
 
-void find_k_first_perfect(int min, int max) {
+void
+find_k_first_perfect(int min, int max) {
     while (min <= max) {
         if (is_perfect(min)) {
             printf("%d ", min);
@@ -62,7 +66,8 @@ void find_k_first_perfect(int min, int max) {
     }
 }
 
-int is_doublon(int k) {
+int
+is_doublon(int k) {
     /* Un nombre est doublon si le produit de ses diviseurs est multiple de la somme de ses diviseurs */
     int i, sum, prod;
     sum = 0;
@@ -79,7 +84,8 @@ int is_doublon(int k) {
     return FALSE;
 }
 
-void find_k_first_doublon(int min, int max) {
+void
+find_k_first_doublon(int min, int max) {
     while (min < max) {
         if (is_doublon(min) == TRUE) {
             printf("%d", min);
@@ -89,7 +95,8 @@ void find_k_first_doublon(int min, int max) {
 
 }
 
-void ex10(void) {
+void
+ex10(void) {
     int choice;
     choice = 10;
     while (choice != 0) {

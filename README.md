@@ -1,7 +1,5 @@
 # UCA C Course Management
 
-___
-
 This repo is for the UCA C Course assignments and projects.
 
 The course is taught by [Prof. Olivier Baldellon](https://www.olivier.baldellon.eu/c)
@@ -24,7 +22,7 @@ but I will try to fix any issues, so feel free to open an issue if you find any.
 
 ## License
 
-[BSD License](LICENSE) 
+[BSD License](LICENCE) 
 
 If you use this repo, please cite it as:
 
@@ -47,6 +45,13 @@ Make sure to use this flags when compiling:
 ```makefile
 CFLAGS = -Wall -ansi -pedantic -g
 ```
+
+You can also use the [clang-format](https://clang.llvm.org/docs/ClangFormat.html) tool to format your code.
+Format rules are in the [.clang-format](.clang-format) file.
+
+You can also use the [astyle](http://astyle.sourceforge.net/) tool to format your code. 
+Format rules are in the [astyle-code-format](astyle-code-format.cfg) file.
+You can use the [format.sh](format.sh) script to format all the files in the repo.
 
 
 ## Contact

@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include "tp1_ex9.h"
 
-#define PREV_WORD 0
+#define PREV_WORD  0
 #define PREV_BLANK 1
 
-void wc(char *filename) {
-    FILE *file;
+void
+wc(char* filename) {
+    FILE* file;
     int c;
     int lines, words, chars, temp;
     lines = 0;
@@ -39,6 +40,7 @@ void wc(char *filename) {
     printf("Chars: %d\n", chars);
 }
 
-void ex9(void) {
+void
+ex9(void) {
     wc("tp1_ex9.c");
 }

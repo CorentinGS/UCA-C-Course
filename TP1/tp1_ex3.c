@@ -5,7 +5,8 @@
 
 static void question1(void);
 
-static void question1(void) {
+static void
+question1(void) {
     float fi = 10.1f;
     float fj = 10.2f;
 
@@ -17,7 +18,8 @@ static void question1(void) {
 
 static void question2(void);
 
-static void question2(void) {
+static void
+question2(void) {
     /* Display int from 1 to 100 with 10 per line */
     int i;
     for (i = 1; i <= 100; i++) {
@@ -30,7 +32,8 @@ static void question2(void) {
 
 static void question3(void);
 
-void exercice3(void) {
+void
+exercice3(void) {
     question1();
     question2();
 }

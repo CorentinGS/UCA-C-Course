@@ -5,10 +5,10 @@
 #include <stdio.h>
 #include "tp1_ex1.h"
 
-
 int c = 3;
 
-void ex1() {
+void
+ex1() {
     int u, d, n;
     u = 1;
     d = 2;

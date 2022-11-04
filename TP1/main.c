@@ -8,7 +8,8 @@
 #include "tp1_ex10.h"
 
 
-int main() {
+int
+main() {
     printf("Hello, World!\n");
     /*ex1();
     ex2(); */

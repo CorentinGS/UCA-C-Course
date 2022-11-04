@@ -3,7 +3,8 @@
 
 static void question1(void);
 
-static void question1(void) {
+static void
+question1(void) {
     /* read user input */
     int i, max, min;
     max = 20;
@@ -23,7 +24,8 @@ static void question2(void);
 
 int read_number(int min, int max);
 
-int read_number(int min, int max) {
+int
+read_number(int min, int max) {
     int i;
     printf("Enter a number between %d and %d: ", min, max);
     if (scanf("%d", &i) != 1) {
@@ -45,7 +47,8 @@ int read_number(int min, int max) {
 #define MAX 20
 #define MIN 0
 
-static void question2(void) {
+static void
+question2(void) {
     int sum, i, n;
     sum = 0;
     i = read_number(MIN, MAX);
@@ -65,23 +68,25 @@ static void question3(void);
 
 int f(void);
 
-static void question3(void) {
+static void
+question3(void) {
     int nb;
     nb = f();
     printf("nb = %d\n", nb);
 }
 
-int f(void) {
+int
+f(void) {
     int i;
     printf("Nombre stp");
     scanf("%d", &i);
     return i;
 }
 
-
-void ex5(void) {
-    /* question2();
-    *
+void
+ex5(void) {
+    /*
+    * question2();
     * question3();
     */
     return;
