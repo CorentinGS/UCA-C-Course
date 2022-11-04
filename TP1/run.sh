@@ -1,0 +1,1 @@
+make all && make clean && ./main
