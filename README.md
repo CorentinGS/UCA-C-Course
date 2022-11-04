@@ -46,12 +46,15 @@ Make sure to use this flags when compiling:
 CFLAGS = -Wall -ansi -pedantic -g
 ```
 
+
 You can also use the [clang-format](https://clang.llvm.org/docs/ClangFormat.html) tool to format your code.
 Format rules are in the [.clang-format](.clang-format) file.
 
+Thanks to [@Majerle](https://github.com/MaJerle/lwmem) for the `.clang-format` file.
+
 You can also use the [astyle](http://astyle.sourceforge.net/) tool to format your code. 
 Format rules are in the [astyle-code-format](astyle-code-format.cfg) file.
-You can use the [format.sh](format.sh) script to format all the files in the repo.
+You can use the [format.sh](format-astyle.sh) script to format all the files in the repo.
 
 
 ## Contact

@@ -1,5 +1,5 @@
 PROG = main
-CC = gcc
+CC = clang
 
 OUT = bin
 
