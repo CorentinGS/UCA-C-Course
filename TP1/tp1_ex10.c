@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "tp1_ex10.h"
 
-#define TRUE 1
+#define TRUE  1
 #define FALSE 0
 
 int is_prime(int n);
@@ -92,7 +92,6 @@ find_k_first_doublon(int min, int max) {
         }
         ++min;
     }
-
 }
 
 void

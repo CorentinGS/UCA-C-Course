@@ -7,7 +7,6 @@
 #include "tp1_ex9.h"
 #include "tp1_ex10.h"
 
-
 int
 main() {
     printf("Hello, World!\n");

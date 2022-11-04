@@ -7,5 +7,4 @@
 
 extern void ex2(void);
 
-
 #endif
