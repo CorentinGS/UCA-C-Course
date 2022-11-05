@@ -1,4 +1,15 @@
-
+/******************************************************************************
+ * Copyright (c) 2022.                                                        *
+ *                                                                            *
+ * TP1                                    ______   _______      _______.      *
+ * tp1_ex3.c                            /      | /  _____|    /       |      *
+ *                                      |  ,----'|  |  __     |   (----`      *
+ * By: CorentinGS                       |  |     |  | |_ |     \   \          *
+ * <c.giaufersaubert@outlook.com>       |  `----.|  |__| | .----)   |         *
+ *                                       \______| \______| |_______/          *
+ * Created: 2022/11/05 by CorentinGS                                          *
+ * LICENCE: BSD 3-Clause License                                              *
+ ******************************************************************************/
 
 #include <stdio.h>
 #include "tp1_ex3.h"
@@ -10,10 +21,10 @@ question1(void) {
     float fi = 10.1f;
     float fj = 10.2f;
 
-    printf("%.16f %.16f %.16f %d %d\n", fi, fj, fi + fj, (int)fi, fi);
-    printf("%.32f %.32f %.32f %d %d\n", fi, fj, fi + fj, (int)fi, fi);
-    printf("%.8f %.8f %.8f %d %d\n", fi, fj, fi + fj, (int)fi, fi);
-    printf("%.2f %.2f %.2f %.2f\n", 5 / 2, 5.0 / 2, 5 / 2.0, 5.0 / 2.0);
+    printf("%.16f %.16f %.16f %d %f\n", fi, fj, fi + fj, (int)fi, fi);
+    printf("%.32f %.32f %.32f %d %f\n", fi, fj, fi + fj, (int)fi, fi);
+    printf("%.8f %.8f %.8f %d %f\n", fi, fj, fi + fj, (int)fi, fi);
+    printf("%.2d %.2f %.2f %.2f\n", 5 / 2, 5.0 / 2, 5 / 2.0, 5.0 / 2.0);
 }
 
 static void question2(void);
@@ -24,13 +35,11 @@ question2(void) {
     int i;
     for (i = 1; i <= 100; i++) {
         printf("%d ", i);
-        if (i % 10 == 0) {
+        if (0 == i % 10) {
             printf("\n");
         }
     }
 }
-
-static void question3(void);
 
 void
 exercice3(void) {

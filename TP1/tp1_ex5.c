@@ -1,3 +1,16 @@
+/******************************************************************************
+ * Copyright (c) 2022.                                                        *
+ *                                                                            *
+ * TP1                                    ______   _______      _______.      *
+ * tp1_ex5.c                             /      | /  _____|    /       |      *
+ *                                      |  ,----'|  |  __     |   (----`      *
+ * By: CorentinGS                       |  |     |  | |_ |     \   \          *
+ * <c.giaufersaubert@outlook.com>       |  `----.|  |__| | .----)   |         *
+ *                                       \______| \______| |_______/          *
+ * Created: 2022/11/05 by CorentinGS                                          *
+ * LICENCE: BSD 3-Clause License                                              *
+ ******************************************************************************/
+
 #include <stdio.h>
 #include "tp1_ex5.h"
 
@@ -53,9 +66,9 @@ question2(void) {
     sum = 0;
     i = read_number(MIN, MAX);
     n = 0;
-    while (i != -1) {
+    while (-1 != i) {
         i = read_number(MIN, MAX);
-        if (i != -1) {
+        if (-1 != i) {
             sum += i;
             ++n;
         }
@@ -85,9 +98,7 @@ f(void) {
 
 void
 ex5(void) {
-    /*
-    * question2();
-    * question3();
-    */
-    return;
+    question1();
+    question2();
+    question3();
 }

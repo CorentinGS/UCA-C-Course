@@ -1,0 +1,98 @@
+# **************************************************************************** #
+#																			   #
+#				  							  ______   _______      _______.   #
+#	Makefile	  							 /      | /  _____|    /       |   #
+#				  							|  ,----'|  |  __     |   (----`   #
+#	By: CorentinGS 							|  |     |  | |_ |     \   \ 	   #
+#	<c.giaufersaubert@outlook.com>			|  `----.|  |__| | .----)   | 	   #
+#				  							 \______| \______| |_______/ 	   #
+#   Created: 2022/11/05 by CorentinGS                                          #
+#   LICENCE: BSD 3-Clause License         									   #
+#																			   #
+# **************************************************************************** #
+
+#####################################################################
+#                  			CONFIG                 					#
+#####################################################################
+
+# Compiler
+CC = clang
+
+# Compiler flags
+CFLAGS = -Wall -ansi -std=c90 -pedantic -g
+
+# Linker flags
+LDFLAGS = -lm
+
+# Executable name
+NAME = tp1
+PROG = main
+
+# Output directory
+OUT = bin
+
+# Misc
+AUTHOR = "CorentinGS"
+VERSION = "1.0"
+DATE = "2022-11-05"
+
+#####################################################################
+#                  			SRC                 					#
+#####################################################################
+
+SRCS	=	$(wildcard *.c)
+# SRCS	=	main.c tp1_ex1.c tp1_ex2.c tp1_ex3.c tp1_ex5.c tp1_ex7.c tp1_ex9.c tp1_ex10.c
+
+_OBJS	=	$(SRCS:.c=.o)
+
+OBJS = $(patsubst %,$(OUT)/%,$(_OBJS))
+
+#####################################################################
+#                  			Logic                 					#
+#####################################################################
+COM_COLOR   = \033[0;34m
+OBJ_COLOR   = \033[0;36m
+OK_COLOR    = \033[0;32m
+ERROR_COLOR = \033[0;31m
+WARN_COLOR  = \033[0;33m
+NO_COLOR    = \033[m
+
+.DEFAULT_GOAL := all
+
+
+#####################################################################
+#                  			RULES                 					#
+#####################################################################
+all: header $(NAME)
+
+header:
+	@printf "%b" "$(OK_COLOR)"
+	@echo "        MAKEFILE           "
+	@echo
+	@printf "%b" "$(OBJ_COLOR)Name:	$(WARN_COLOR)$(NAME)\n$(NO_COLOR)"
+	@printf "%b" "$(OBJ_COLOR)Author:	$(WARN_COLOR)$(AUTHOR)\n$(NO_COLOR)"
+	@printf "%b" "$(OBJ_COLOR)Date: 	$(WARN_COLOR)$(DATE)\n$(NO_COLOR)"
+	@printf "%b" "$(OBJ_COLOR)CC: 	$(WARN_COLOR)$(CC)\n$(NO_COLOR)"
+	@printf "%b" "$(OBJ_COLOR)Flags: 	$(WARN_COLOR)$(CFLAGS)\n$(NO_COLOR)"
+	@echo
+
+$(NAME): $(OBJS)
+	@$(CC) $(CFLAGS) -o $(OUT)/$(NAME) $(OBJS) $(LDFLAGS)
+	@printf "%-53b%b" "$(OK_COLOR)[$(NAME)] compiled successfully !$(NO_COLOR)" "$(OK_COLOR)[✓]$(NO_COLOR)\n"
+
+
+$(OUT)/%.o: %.c
+	@$(CC) $(CFLAGS) -c -o $@ $<
+	@printf "%-53b%b" "$(OK_COLOR)[$(NAME)] compiling $(OBJ_COLOR)$< $(NO_COLOR)" "$(OK_COLOR)[✓]$(NO_COLOR)\n"
+
+.PHONY: clean fclean
+clean:
+	@rm -rf $(OUT)/*.o
+	@printf "%-53b%b" "$(COM_COLOR)clean:" "$(OK_COLOR)[✓]$(NO_COLOR)\n"
+
+fclean:	clean
+		@rm -rf $(OUT)/$(NAME)
+		@printf "%-53b%b" "$(COM_COLOR)fclean:" "$(OK_COLOR)[✓]$(NO_COLOR)\n"
+
+
+re:	header fclean $(NAME)

@@ -1,3 +1,16 @@
+/******************************************************************************
+ * Copyright (c) 2022.                                                        *
+ *                                                                            *
+ * TP1                                    ______   _______      _______.      *
+ * tp1_ex10.c                            /      | /  _____|    /       |      *
+ *                                      |  ,----'|  |  __     |   (----`      *
+ * By: CorentinGS                       |  |     |  | |_ |     \   \          *
+ * <c.giaufersaubert@outlook.com>       |  `----.|  |__| | .----)   |         *
+ *                                       \______| \______| |_______/          *
+ * Created: 2022/11/05 by CorentinGS                                          *
+ * LICENCE: BSD 3-Clause License                                              *
+ ******************************************************************************/
+
 #include <stdio.h>
 #include "tp1_ex10.h"
 
@@ -23,7 +36,7 @@ is_prime(int n) {
         return FALSE;
     }
     for (i = 2; i < n; ++i) {
-        if (n % i == 0) {
+        if (0 == n % i) {
             return FALSE;
         }
     }
@@ -49,7 +62,7 @@ is_perfect(int n) {
     int i, sum;
     sum = 0;
     for (i = 1; i < n; ++i) {
-        if (n % i == 0) {
+        if (0 == n % i) {
             sum += i;
         }
     }
@@ -87,7 +100,7 @@ is_doublon(int k) {
 void
 find_k_first_doublon(int min, int max) {
     while (min < max) {
-        if (is_doublon(min) == TRUE) {
+        if (TRUE == is_doublon(min)) {
             printf("%d", min);
         }
         ++min;
@@ -98,7 +111,7 @@ void
 ex10(void) {
     int choice;
     choice = 10;
-    while (choice != 0) {
+    while (0 != choice) {
         printf("1. Premier nombre premier\n");
         printf("2. Premier nombre parfait\n");
         printf("3. Premier nombre doublon\n");

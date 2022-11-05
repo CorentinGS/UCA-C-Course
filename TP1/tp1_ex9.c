@@ -1,3 +1,16 @@
+/******************************************************************************
+ * Copyright (c) 2022.                                                        *
+ *                                                                            *
+ * TP1                                    ______   _______      _______.      *
+ * tp1_ex9.c                             /      | /  _____|    /       |      *
+ *                                      |  ,----'|  |  __     |   (----`      *
+ * By: CorentinGS                       |  |     |  | |_ |     \   \          *
+ * <c.giaufersaubert@outlook.com>       |  `----.|  |__| | .----)   |         *
+ *                                       \______| \______| |_______/          *
+ * Created: 2022/11/05 by CorentinGS                                          *
+ * LICENCE: BSD 3-Clause License                                              *
+ ******************************************************************************/
+
 #include <stdio.h>
 #include "tp1_ex9.h"
 
@@ -5,7 +18,7 @@
 #define PREV_BLANK 1
 
 void
-wc(char* filename) {
+wc(const char* filename) {
     FILE* file;
     int c;
     int lines, words, chars, temp;
@@ -14,22 +27,22 @@ wc(char* filename) {
     chars = 0;
     temp = 0;
     file = fopen(filename, "r");
-    if (file == NULL) {
+    if (NULL == file) {
         printf("Error opening file\n");
         return;
     }
     while ((c = fgetc(file)) != EOF) {
         ++chars;
-        if (c == '\n') {
+        if ('\n' == c) {
             ++lines;
         }
-        if (c == ' ' || c == '\n' || c == '\t') {
-            if (temp == PREV_WORD) {
+        if (' ' == c || '\n' == c || '\t' == c) {
+            if (PREV_WORD == temp) {
                 ++words;
             }
             temp = PREV_BLANK;
         } else {
-            if (temp == PREV_BLANK) {
+            if (PREV_BLANK == temp) {
                 temp = PREV_WORD;
             }
         }
