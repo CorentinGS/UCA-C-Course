@@ -44,7 +44,6 @@ read_number(int min, int max) {
     if (scanf("%d", &i) != 1) {
         while ((i = getchar()) != '\n' && i != EOF) {}
         printf("Invalid input dude, be careful!\n");
-        return -1;
     }
     if (i == 99) {
         return -1;
