@@ -70,7 +70,7 @@ jobs:
           NOVISU=1 make re
           
           cd ../TP3
-          echo "TP3
+          echo "TP3"
           NOVISU=1 make re
 
       - name: Perform CodeQL Analysis
