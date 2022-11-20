@@ -201,13 +201,15 @@ all: header setup $(NAME)
 header:
 		@printf "%-10b" "$(OK_COLOR)"
 		@echo "                    "
-		@echo "  _______ _____  __ "
-		@echo " |__   __|  __ \/_ |"
-		@echo "    | |  | |__) || |"
-		@echo "    | |  |  ___/ | |"
-		@echo "    | |  | |     | |"
-		@echo "    |_|  |_|     |_|"
-		@echo "                    "
+		@echo "   _______ _____ ___  "
+		@echo "  |__   __|  __ \__ \ "
+		@echo "     | |  | |__) | ) |"
+		@echo "     | |  |  ___/ / / "
+		@echo "     | |  | |    / /_ "
+		@echo "     |_|  |_|   |____|"
+		@echo "		    		     "
+
+
 		# ASCII art from https://patorjk.com/software/taag/#p=display&f=Big&t=TP1
 		@echo
 		@printf "%-20b%b" "$(OBJ_COLOR)Name:" "$(WARN_COLOR)$(NAME)\n$(NO_COLOR)"
