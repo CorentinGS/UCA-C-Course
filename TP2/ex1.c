@@ -82,7 +82,6 @@ char_exists(char a, const char* s) {
 static int
 is_valid(const char* s) {
     int x;
-    size_t status;
     for (x = 0; s[x] != '\0'; ++x) {
         if (char_exists(s[x], "0123456789")) {
             if (atoi(s) % 3 == 0) {

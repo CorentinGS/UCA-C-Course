@@ -11,7 +11,6 @@
  * LICENCE: BSD 3-Clause License                                              *
  ******************************************************************************/
 
-#include <stdio.h>
 #include "player.h"
 
 int
