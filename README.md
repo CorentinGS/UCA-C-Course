@@ -7,6 +7,8 @@ The course is taught by [Prof. Olivier Baldellon](https://www.olivier.baldellon.
 ## Assignments
 
 - [x] [TP 1](TP1)
+- [x] [TP 2](TP2)
+- [x] [TP 3](TP3)
 
 ## Disclaimer
 
