@@ -14,10 +14,10 @@
 # Build the project
 
 # Build TP1
-cd TP1 && make re && cd ..
+cd TP1 && NOVISU=1 make re && cd ..
 
 # Build TP2
-cd TP2 && make re && cd ..
+cd TP2 && NOVISU=1 make re && cd ..
 
 # Build TP3
-cd TP3 && make re && cd ..
+cd TP3 && NOVISU=1 make re && cd ..
