@@ -26,6 +26,7 @@ static DoubleNode* tail(CircularLinkedList* list);
 
 static void list_cat(CircularLinkedList* l1, CircularLinkedList* l2);
 static void print(CircularLinkedList* list);
+static void free_list(CircularLinkedList* list);
 
 void
 ex4(void) {
@@ -111,6 +112,23 @@ ex4(void) {
 
     list_cat(list2, list3);
     print(list2);
+
+    flush(list2);
+    flush(list3);
+
+    free_list(list);
+    free_list(list2);
+    free_list(list3);
+}
+
+static void
+free_list(CircularLinkedList* list) {
+    if (NULL != list) {
+        if (NULL != list->sentinel) {
+            free(list->sentinel);
+        }
+        free(list);
+    }
 }
 
 static int
