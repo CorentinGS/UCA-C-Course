@@ -52,7 +52,7 @@ SRCS_PATH		= .
 
 INCLUDE_PATH	= .
 
-SRCS			= ex1.c ex2.c
+SRCS			= ex1.c ex2.c ex4.c
 
 MAIN			= main.c
 

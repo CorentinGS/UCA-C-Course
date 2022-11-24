@@ -1,7 +1,3 @@
-#include "ex1.h"
-#include "ex2.h"
-#include "ex4.h"
-
 /******************************************************************************
  * Copyright (c) 2022.                                                        *
  *                                                                            *
@@ -15,14 +11,25 @@
  * LICENCE: BSD 3-Clause License                                              *
  ******************************************************************************/
 
-int
-main() {
-    /*
-     * ex1();
-    */
+#include "utils.h"
 
-    ex2();
-    ex4();
+struct double_node_t {
+    int value;
+    struct double_node_t* next;
+    struct double_node_t* prev;
+};
 
-    return 0;
-}
+typedef struct double_node_t DoubleNode;
+
+struct sentinel_t {
+    DoubleNode* head;
+};
+
+typedef struct sentinel_t Sentinel;
+
+typedef struct {
+    Sentinel* sentinel;
+    int size;
+} CircularLinkedList;
+
+extern void ex4(void);
