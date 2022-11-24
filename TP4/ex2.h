@@ -32,6 +32,7 @@ static void test_first();
 static void test_last();
 static void test_add_first();
 static void test_add_last();
+static void test_add_after();
 static void test_remove_first();
 static void test_remove_last();
 static void test_remove_after();

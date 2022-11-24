@@ -26,6 +26,7 @@ ex2() {
     test_last();
     test_add_first();
     test_add_last();
+    test_add_after();
     test_remove_first();
     test_remove_last();
     test_remove_after();
@@ -98,6 +99,18 @@ test_add_last() {
     add_last(&l, 42);
     assert(value(first(&l)) == 41);
     assert(value(last(&l)) == 42);
+}
+
+static void
+test_add_after() {
+    LinkedList l = {NULL, NULL};
+    add_last(&l, 41);
+    add_last(&l, 42);
+    add_last(&l, 43);
+    add_after(&l, first(&l), 44);
+    assert(value(first(&l)) == 41);
+    assert(value(next(first(&l))) == 44);
+    assert(value(next(next(first(&l)))) == 42);
 }
 
 static void
