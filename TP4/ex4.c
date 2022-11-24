@@ -15,6 +15,9 @@
 #include <malloc.h>
 #include "ex4.h"
 
+/* Is Even using bitwise AND */
+#define IS_EVEN(x) ((x & 1) == 0)
+
 static int value(DoubleNode* node);
 static DoubleNode* next(DoubleNode* node);
 static DoubleNode* prev(DoubleNode* node);
@@ -119,6 +122,7 @@ ex4(void) {
     free_list(list);
     free_list(list2);
     free_list(list3);
+
 }
 
 static void
