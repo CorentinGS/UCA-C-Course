@@ -25,22 +25,6 @@ typedef struct {
     Node* last;
 } LinkedList;
 
-
-static void test_value();
-static void test_next();
-static void test_first();
-static void test_last();
-static void test_add_first();
-static void test_add_last();
-static void test_add_after();
-static void test_remove_first();
-static void test_remove_last();
-static void test_remove_after();
-static void test_remove_all();
-static void test_size();
-static void test_is_empty();
-
-
 extern void ex2(void);
 int value(Node* n);
 Node* next(Node* n);
@@ -55,3 +39,6 @@ void delete_last(LinkedList* l);
 void delete_after(LinkedList* l, Node* n);
 void flush(LinkedList* l);
 int size(LinkedList* l);
+void print(LinkedList* l);
+LinkedList merge(LinkedList* l1, LinkedList* l2);
+LinkedList merge_destruct(const LinkedList* l1, LinkedList* l2);
