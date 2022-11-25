@@ -35,38 +35,38 @@ main() {
     printf("\n");
 
     char str1[100] = "Hello";
-        char str2[100] = "World";
-        char *mystr = my_strcat(str1, str2);
-        printf("%s\n", mystr);
+    char str2[100] = "World";
+    char* mystr = my_strcat(str1, str2);
+    printf("%s\n", mystr);
 
-        char str3[100] = "Hello";
-        char str4[100] = "World";
-        char *mystr2 = my_strcpy(str3, str4);
-        printf("%s", mystr2);
+    char str3[100] = "Hello";
+    char str4[100] = "World";
+    char* mystr2 = my_strcpy(str3, str4);
+    printf("%s", mystr2);
 
     return 0;
 }
 
-char* my_strcat(char* dest, const char* src) {
+char*
+my_strcat(char* dest, const char* src) {
     char* p = dest;
     while (*p != '\0') {
         p++;
     }
     while (*src != '\0') {
-        *p = *src;
+        *p = *src++;
         p++;
-        src++;
     }
     *p = '\0';
     return dest;
 }
 
-char* my_strcpy(char* dest, const char* src) {
+char*
+my_strcpy(char* dest, const char* src) {
     char* p = dest;
     while (*src != '\0') {
-        *p = *src;
+        *p = *src++;
         p++;
-        src++;
     }
     *p = '\0';
     return dest;
